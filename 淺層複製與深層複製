@@ -1,5 +1,18 @@
 http://openhome.cc/Gossip/Java/ArrayCopy.html
 
-http://blog.monkeypotion.net/gameprog/pattern/prototype-pattern
-
 實作 Cloneable
+clone方法执行的是淺層複製， 在编写程序时要注意这个细节，必須覆寫Object中的clone方法， 才能實現深層複製
+如果想要深拷贝一个对象， 这个对象必须要实现Cloneable接口，实现clone方法，并且在clone方法内部，
+把该对象引用的其他对象也要clone一份 ， 这就要求这个被引用的对象必须也要实现Cloneable接口并且实现clone方法。
+http://blog.csdn.net/zhangjg_blog/article/details/18369201
+http://royaltykao.blogspot.tw/2008/10/javaclone.html
+
+
+
+
+How do I perform a deep clone using Serializable?
+http://www.avajava.com/tutorials/lessons/how-do-i-perform-a-deep-clone-using-serializable.html
+
+
+Prototype 模式
+http://openhome.cc/Gossip/DesignPattern/PrototypePattern.htm
