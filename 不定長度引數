@@ -1,1 +1,14 @@
 
+不定長度引數實際是展開為陣列，而呼叫不定長度引數的客戶端，例如System.out.println(MathTool.sum(1, 2, 3))，展開後也是變為陣列：
+
+System.out.println(
+     sum(new int[] {1, 2, 3})
+ );
+
+因此，就算在JDK1.4之前，也可以使用陣列來解決引數個數無法確認的方法呼叫。
+
+使用不定長度引數時，方法上宣告的不定長度參數必須是參數列最後一個。
+使用兩個以上不定長度引數也是不合法的
+
+
+http://openhome.cc/Gossip/Java/Variable-lengthArgument.html
