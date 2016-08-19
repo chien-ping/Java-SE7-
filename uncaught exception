@@ -15,3 +15,10 @@ P11-16似乎寫錯了
 
 
 https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadGroup.html#uncaughtException(java.lang.Thread,%20java.lang.Throwable)
+
+
+
+thread內的exception可以用try catch處理異常,但是不能拋出異常，因為run方法沒有拋出異常，所以無法從呼叫此執行緒的的執行緒XDDDDD捕獲(也就是外部)
+但是如果執行緒因未捕獲的異常而終止，可以透過exceptionhandler來處理
+
+http://stackoverflow.com/questions/6546193/how-to-catch-an-exception-from-a-thread
