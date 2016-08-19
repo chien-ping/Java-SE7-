@@ -1,0 +1,17 @@
+處理順序:
+
+先看看此Thread 是否有設定setUncaughtExceptionHandler，實作 Thread.UncaughtExceptionHandler ，進行針對此Thead的例外捕獲處理
+if not
+JVM 會找到此Thread的Threadgroup，並調用其 uncaughtException()方法
+
+此方法內部的執行順序為
+•如果此线程组有一个父线程组，那么调用此父线程组的 uncaughtexception 方法时带有两个相同的参数。 
+•否则，此方法将查看是否安装了默认的未捕获异常处理程序，如果是，则在调用其 uncaughtexception 方法时带有两个相同的参数。 
+•否则，此方法将确认 throwable 参数是否为一个 threaddeath 实例。如果是，则不会做任何特殊的操作。否则，在从线程的 getname 方法返回时，
+会使用 throwable 的 printstacktrace 方法，将包含线程名称的消息和堆栈跟踪信息输出到标准错误流。 
+
+
+P11-16似乎寫錯了
+
+
+https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadGroup.html#uncaughtException(java.lang.Thread,%20java.lang.Throwable)
