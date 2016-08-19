@@ -1,0 +1,2 @@
+condition.await()==>將目前的執行緒放到condition等待集合等待
+https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html
