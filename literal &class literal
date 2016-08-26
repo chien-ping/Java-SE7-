@@ -1,0 +1,9 @@
+literal 就是字面上的意思XDDDDDD
+class literal 取得.class檔案載入時產生的Class物件
+寫法 : Integer.class, String.class
+基本型別: Integer.TYPE
+所以.class不是屬性QQ
+
+http://meebox.blogspot.tw/2012/07/constant-literal.html
+http://britender.blogspot.tw/2012/10/literal.html
+http://wuaner.iteye.com/blog/1009134
