@@ -1,0 +1,14 @@
+AccessibleObject 类是 Field、Method 和 Constructor 对象的基类。
+它提供了将反射的对象标记为在使用时取消默认 Java 语言访问控制检查的能力。
+对于公共成员、默认（打包）访问成员、受保护成员和私有成员，
+在分别使用 Field、Method 或 Constructor 对象来设置或获得字段、调用方法，或者创建和初始化类的新实例的时候，会执行访问检查。 
+
+
+
+在反射对象中设置 accessible 标志允许具有足够特权的复杂应用程序（比如 Java Object Serialization 或其他持久性机制）
+以某种通常禁止使用的方式来操作对象。 
+
+http://stackoverflow.com/questions/16230601/what-is-the-reason-behind-setaccessible-method-of-accessibleobject-class-have-a
+https://docs.oracle.com/javase/7/docs/api/java/lang/reflect/AccessibleObject.html
+http://huoyanyanyi10.iteye.com/blog/1317614
+
